@@ -1,7 +1,3 @@
-<!--
-This transcript was generated using: https://github.com/mahtoid/DiscordChatExporterPy
-If you have any issues or suggestions - open an issue on the Github Repository or alternatively join https://discord.mahto.id
--->
 
 <!doctype html>
 <html lang="en">
@@ -2117,7 +2113,261 @@ If you have any issues or suggestions - open an issue on the Github Repository o
         color: #a3bde6;
         font-size: 12px;
       }
+
+      
+      ::selection {
+        background: #feb5ff;
+        color: #19121a;
+      }
+
+      html,
+      body {
+        font-family: "Nunito", "Quicksand", "gg sans", Helvetica, Arial,
+          sans-serif;
+        background-image:
+          radial-gradient(circle at 10% 6%, rgba(254, 181, 255, 0.1), transparent 38%),
+          radial-gradient(circle at 92% 2%, rgba(181, 210, 255, 0.1), transparent 42%);
+        background-attachment: fixed;
+      }
+
+      /* top bar */
+      .panel {
+        box-shadow: 0 2px 0 rgba(254, 181, 255, 0.25);
+      }
+
+      .panel__summary-button {
+        border-radius: 999px;
+        padding: 0.2em 0.9em;
+        background: rgba(254, 181, 255, 0.14);
+        color: #ffdaff;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+
+      .panel__summary-button:hover {
+        background: rgba(254, 181, 255, 0.28);
+        transform: scale(1.06);
+      }
+
+      /* welcome title */
+      .info__title {
+        width: fit-content;
+        font-weight: 800;
+        background: linear-gradient(90deg, #b5d2ff, #feb5ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+
+      .info__title::before {
+        content: "✧ ";
+      }
+
+      .info__title::after {
+        content: " ♡";
+      }
+
+      .info__subject {
+        color: #b5d2ff;
+      }
+
+      /* messages */
+      .chatlog__message-group {
+        border-color: rgba(254, 181, 255, 0.14);
+      }
+
+      .chatlog__message:hover {
+        background-color: rgba(254, 181, 255, 0.06);
+        border-radius: 14px;
+      }
+
+      .chatlog__avatar {
+        box-sizing: border-box;
+        border: 2px solid #feb5ff;
+        box-shadow: 0 0 0 3px rgba(254, 181, 255, 0.16);
+        transition: transform 0.2s ease;
+      }
+
+      .chatlog__message-group:nth-child(even) .chatlog__avatar {
+        border-color: #b5d2ff;
+        box-shadow: 0 0 0 3px rgba(181, 210, 255, 0.16);
+      }
+
+      .chatlog__avatar:hover {
+        transform: scale(1.1) rotate(-5deg);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .chatlog__avatar,
+        .panel__summary-button {
+          transition: none;
+        }
+        .chatlog__avatar:hover,
+        .panel__summary-button:hover {
+          transform: none;
+        }
+      }
+
+      .chatlog__author-name {
+        font-weight: 800;
+      }
+
+      .chatlog__bot-tag {
+        border-radius: 999px;
+        padding: 0 0.5rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+      }
+
+      .chatlog__timestamp {
+        padding: 0 0.55rem;
+        border-radius: 999px;
+        background: rgba(181, 210, 255, 0.08);
+      }
+
+      .unix-timestamp,
+      .mention,
+      .pre--inline {
+        border-radius: 8px;
+      }
+
+      .mention {
+        color: #ffdaff;
+        font-weight: 700;
+      }
+
+      .quote {
+        border-radius: 4px 12px 12px 4px;
+      }
+
+      /* embeds */
+      .chatlog__embed {
+        --embed-color: #feb5ff;
+        border-radius: 16px;
+        border-color: rgba(254, 181, 255, 0.3);
+        border-left-width: 6px;
+        box-shadow: 0 4px 14px rgba(18, 21, 26, 0.45);
+      }
+
+      .chatlog__embed-title,
+      .chatlog__embed-author-name {
+        font-weight: 800;
+      }
+
+      .chatlog__attachment,
+      .chatlog__embed-image,
+      .chatlog__embed-thumbnail {
+        border-radius: 14px;
+      }
+
+      .pre--multiline {
+        border-radius: 14px;
+        border-color: rgba(254, 181, 255, 0.25);
+      }
+
+      .chatlog__reaction {
+        border-radius: 999px;
+        border: 1px solid rgba(254, 181, 255, 0.3);
+      }
+
+      /* scrollbar */
+      .main {
+        scrollbar-color: #feb5ff transparent;
+      }
+
+      .main::-webkit-scrollbar-thumb {
+        background-color: #feb5ff;
+        border-radius: 999px;
+        border: 0;
+      }
+
+      /* footer */
+      .footer {
+        border-radius: 999px;
+        padding-left: 24px;
+        box-shadow: inset 0 0 0 1px rgba(254, 181, 255, 0.28);
+      }
+
+      .footer__text::before {
+        content: "♡ ";
+        color: #feb5ff;
+      }
+
+      /* notice strip + two-line footer */
+      .notice {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        height: 22px;
+        padding: 0 16px;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 600;
+        color: #a3bde6;
+        background: rgba(254, 181, 255, 0.08);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        user-select: none;
+      }
+
+      .main {
+        height: calc(100% - 164px);
+      }
+
+      .footer {
+        flex-direction: row;
+        align-items: center;
+        height: 36px;
+        border-radius: 28px;
+        padding-left: 16px;
+      }
+
+      .footer__icon {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        object-fit: contain;
+      }
+
+      .footer__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .footer__text {
+        max-width: 100%;
+      }
+
+      .footer__link {
+        color: #b5d2ff;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: rgba(254, 181, 255, 0.6);
+        text-underline-offset: 3px;
+      }
+
+      .footer__link:hover {
+        color: #feb5ff;
+      }
+
+      .footer__credit {
+        font-size: 13px;
+        line-height: 16px;
+        color: #91a8cc;
+      }
+
+      .footer__heart {
+        color: #feb5ff;
+      }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css"
@@ -2223,13 +2473,18 @@ If you have any issues or suggestions - open an issue on the Github Repository o
       </div>
     </div>
 
+    <div class="notice">
+      Do not share screenshots, text, or context from these logs outside of
+      official channels
+    </div>
+
     <div class="main">
       <div class="buffer">
         <!-- Magical space goes here -->
       </div>
 
       <div class="info">
-        <span class="info__title">Welcome to #{{CHANNEL_NAME}}!</span>
+        <span class="info__title">Modmail Archive of: #{{CHANNEL_NAME}}</span>
         {{SUBJECT}}
       </div>
 
@@ -2237,9 +2492,27 @@ If you have any issues or suggestions - open an issue on the Github Repository o
     </div>
 
     <div class="footer">
+      <img
+        class="footer__icon"
+        src="https://cdn.jsdelivr.net/gh/M7M-dev-stuff/M7M_TicketExporter@master/assets/CritterMarch.webp?raw=true"
+        alt=""
+      />
+      <div class="footer__body">
       <span class="footer__text"
-        >This transcript was generated on {{DATE_TIME}}</span
+        >This transcript was generated on {{DATE_TIME}} in
+        <a
+          class="footer__link"
+          href="https://discord.gg/march7th"
+          target="_blank"
+          rel="noopener noreferrer"
+          >March 7th: Evernight Mains</a
+        ></span
       >
+      <span class="footer__credit"
+        >Developed with <span class="footer__heart">♡</span> by @cinnakoko
+        &amp; @augustine7th</span
+      >
+      </div>
     </div>
 
     <div id="context-menu">
